@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Syarat & Ketentuan — KreaWords!</title>
+  <link rel="icon" type="image" href="KREAWORDS BULET.png" height="10px">
+  <meta name="description" content="Syarat & Ketentuan layanan KreaWords" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        keyframes: { float: { '0%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' }, '100%': { transform: 'translateY(0px)' } } },
+        animation: { float: 'float 4s ease-in-out infinite' }
+      } }
+    }
+  </script>
+  <style>
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); }
+    header.scrolled { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="antialiased text-slate-100 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800">
+  <!-- HEADER (sama persis dengan yang kamu pakai) -->
+  <header class="sticky top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="KREAWORDS BULET.png" alt="logo" width="50" height="50" class="rounded-full object-cover">
+        <span class="hidden md:block font-semibold text-lg tracking-wide">
+          KREAWORDS!
+          <p class="text-xs text-gray-400 -mt-1" style="font-size: x-small;">— Build Your Project —</p>
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="hover:underline ml-2 px-3 py-1 rounded-md glass ring-1 ring-white/6">Home</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Buka menu" class="p-2 glass rounded-md">
+          <svg id="menuIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden max-w-7xl mx-auto px-6 pb-6 hidden">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="block py-2 px-3 rounded-md hover:bg-white/5">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="pt-14 pb-24 max-w-3xl mx-auto px-6">
+    <div class="glass p-8 rounded-2xl border border-white/10 shadow-xl">
+      <h1 class="text-3xl font-bold mb-6">Syarat &amp; Ketentuan</h1>
+      <p class="text-slate-300 mb-4">
+        Selamat datang di KreaWords! Halaman ini menjelaskan syarat dan ketentuan penggunaan layanan kami. Mohon baca dengan seksama sebelum menggunakan layanan atau melakukan pemesanan.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">1. Penerimaan Ketentuan</h2>
+      <p class="text-slate-300 mb-4">
+        Dengan mengakses atau menggunakan layanan KreaWords, Anda menyatakan telah membaca, memahami, dan menyetujui semua syarat dan ketentuan ini. Jika Anda tidak setuju, mohon untuk tidak menggunakan layanan kami.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">2. Ruang Lingkup Layanan</h2>
+      <p class="text-slate-300 mb-4">
+        KreaWords menyediakan jasa pembuatan website, desain identitas visual, optimasi, dan layanan digital terkait lainnya. Ruang lingkup pekerjaan, fitur, dan batas tanggung jawab akan diatur dalam perjanjian terpisah atau penawaran/paket yang disepakati.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">3. Pemesanan & Konfirmasi</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mb-4">
+        <li>Permintaan layanan dianggap sah setelah konfirmasi dan kesepakatan mengenai cakupan pekerjaan.</li>
+        <li>Biasanya diperlukan down payment (DP) sesuai kesepakatan sebelum pengerjaan dimulai.</li>
+        <li>Estimasi waktu pengerjaan bersifat perkiraan dan dapat berubah sesuai kompleksitas serta respons klien.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">4. Harga & Pembayaran</h2>
+      <p class="text-slate-300 mb-4">
+        Harga yang tercantum pada paket atau penawaran adalah acuan dan dapat berubah sewaktu-waktu. Metode pembayaran, termin, dan syarat pengembalian dana akan disepakati secara tertulis pada saat pemesanan.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">5. Revisi & Deliverable</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mb-4">
+        <li>Jumlah revisi mengikuti paket yang telah disepakati. Revisi tambahan akan dikenakan biaya tambahan.</li>
+        <li>Deliverable akhir diserahkan setelah pembayaran penuh atau sesuai ketentuan pembayaran dalam perjanjian.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">6. Hak Kekayaan Intelektual</h2>
+      <p class="text-slate-300 mb-4">
+        Semua materi, desain, dan kode yang dibuat oleh KreaWords tetap menjadi hak milik kami sampai pembayaran lunas dan hak penggunaan diserahkan sesuai kesepakatan. Penggunaan ulang tanpa izin tertulis dilarang.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">7. Kewajiban Pengguna</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mb-4">
+        <li>Pengguna wajib menyediakan konten, materi, akses hosting, domain, dan informasi lain yang diperlukan tepat waktu.</li>
+        <li>Pengguna bertanggung jawab atas legalitas konten yang diberikan (hak cipta, lisensi, dan lain-lain).</li>
+        <li>Pengguna harus memberikan review dan feedback sesuai jadwal yang disepakati agar proses pengerjaan berjalan lancar.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">8. Batasan Tanggung Jawab</h2>
+      <p class="text-slate-300 mb-4">
+        KreaWords tidak bertanggung jawab terhadap kerugian tidak langsung, kehilangan keuntungan, kehilangan data, atau kerusakan lainnya yang timbul akibat penggunaan layanan, kecuali jika diatur lain secara tertulis dalam perjanjian.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">9. Force Majeure</h2>
+      <p class="text-slate-300 mb-4">
+        Kami tidak dapat dimintai pertanggungjawaban atas keterlambatan atau kegagalan pemenuhan kewajiban yang disebabkan oleh keadaan di luar kendali wajar (force majeure), seperti bencana alam, gangguan infrastruktur pihak ketiga, atau kebijakan pemerintah.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">10. Pembatalan & Pengembalian Dana</h2>
+      <p class="text-slate-300 mb-4">
+        Pembatalan oleh klien setelah pengerjaan dimulai dapat berdampak pada pengembalian dana sesuai proporsi pekerjaan yang telah diselesaikan. Ketentuan refund akan diatur pada perjanjian/penawaran.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">11. Penyelesaian Sengketa</h2>
+      <p class="text-slate-300 mb-4">
+        Setiap perselisihan yang timbul dari syarat dan ketentuan ini akan diselesaikan secara musyawarah. Jika tidak tercapai kesepakatan, penyelesaian akan dilakukan berdasarkan hukum yang berlaku di Republik Indonesia.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">12. Perubahan Ketentuan</h2>
+      <p class="text-slate-300 mb-4">
+        KreaWords berhak untuk mengubah syarat & ketentuan ini sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini dan berlaku sejak diumumkan.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">13. Kontak</h2>
+      <p class="text-slate-300">
+        Jika Anda memiliki pertanyaan mengenai Syarat & Ketentuan ini, silakan hubungi kami melalui halaman Kontak atau:
+      </p>
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mt-3">
+        <li>Email: kreawords@gmail.com</li>
+        <li>WhatsApp: 0819-9918-2090</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- FOOTER (sama persis tapi dengan link ke privacy & terms) -->
+  <footer class="mt-20 border-t border-white/6 pt-8 pb-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-slate-400">© 2025 KreaWords! — All right reserved.</div>
+      <div class="flex gap-4">
+        <a href="privacy.html" class="text-slate-300">Privacy</a>
+        <a href="terms.html" class="text-slate-300">Syarat</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Theme toggle (uses simple class toggle; your CSS supports .light/.dark)
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      if (document.documentElement.classList.contains('light')) {
+        document.body.style.background = 'linear-gradient(180deg,#faf9ff,#eef2ff)';
+        document.body.style.color = '#0f172a';
+      } else {
+        document.body.style.background = '';
+        document.body.style.color = '';
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

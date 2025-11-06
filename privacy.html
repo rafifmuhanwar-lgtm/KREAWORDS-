@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kebijakan Privasi — KreaWords!</title>
+  <link rel="icon" type="image" href="KREAWORDS BULET.png" height="10px">
+  <meta name="description" content="Kebijakan Privasi KreaWords!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        keyframes: { float: { '0%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' }, '100%': { transform: 'translateY(0px)' } } },
+        animation: { float: 'float 4s ease-in-out infinite' }
+      } }
+    }
+  </script>
+  <style>
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); }
+    header.scrolled { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="antialiased text-slate-100 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="KREAWORDS BULET.png" alt="logo" width="50" height="50" class="rounded-full object-cover">
+        <span class="hidden md:block font-semibold text-lg tracking-wide">
+          KREAWORDS!
+          <p class="text-xs text-gray-400 -mt-1" style="font-size: x-small;">— Build Your Project —</p>
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="hover:underline ml-2 px-3 py-1 rounded-md glass ring-1 ring-white/6">Home</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Buka menu" class="p-2 glass rounded-md">
+          <svg id="menuIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden max-w-7xl mx-auto px-6 pb-6 hidden">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="block py-2 px-3 rounded-md hover:bg-white/5">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="pt-14 pb-24 max-w-3xl mx-auto px-6">
+    <div class="glass p-8 rounded-2xl border border-white/10 shadow-xl">
+      <h1 class="text-3xl font-bold mb-6">Kebijakan Privasi</h1>
+      <p class="text-slate-300 mb-4">
+        Kebijakan Privasi ini menjelaskan bagaimana KreaWords! mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi yang Anda berikan saat menggunakan layanan kami.
+      </p>
+      <p class="text-slate-300 mb-6">
+        Dengan mengakses atau menggunakan layanan kami, Anda dianggap telah membaca, memahami, dan menyetujui kebijakan ini.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">1. Informasi yang Kami Kumpulkan</h2>
+      <p class="text-slate-300 mb-4">
+        Kami dapat mengumpulkan informasi pribadi seperti nama, alamat email, nomor telepon, dan informasi lain yang Anda berikan saat melakukan pemesanan layanan, menghubungi kami, atau mengisi formulir di website.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">2. Penggunaan Informasi</h2>
+      <p class="text-slate-300 mb-4">
+        Informasi yang dikumpulkan digunakan untuk:
+      </p>
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mb-4">
+        <li>Memberikan dan mengelola layanan yang Anda pesan.</li>
+        <li>Berkomunikasi terkait pesanan, penawaran, atau layanan.</li>
+        <li>Meningkatkan kualitas layanan dan pengalaman pengguna.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">3. Keamanan Data</h2>
+      <p class="text-slate-300 mb-4">
+        Kami berkomitmen menjaga kerahasiaan data pribadi Anda. Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi data dari akses, penggunaan, atau pengungkapan yang tidak sah.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">4. Pembagian Informasi kepada Pihak Ketiga</h2>
+      <p class="text-slate-300 mb-4">
+        Kami tidak akan menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pihak ketiga tanpa persetujuan, kecuali jika diperlukan untuk:
+      </p>
+      <ul class="list-disc list-inside text-slate-300 space-y-2 mb-4">
+        <li>Proses penyelesaian layanan oleh partner resmi kami.</li>
+        <li>Kepatuhan terhadap hukum atau permintaan pemerintah.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">5. Perubahan Kebijakan</h2>
+      <p class="text-slate-300 mb-4">
+        Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan akan diberlakukan setelah dipublikasikan pada halaman ini.
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">6. Kontak</h2>
+      <p class="text-slate-300">
+        Jika Anda memiliki pertanyaan terkait kebijakan ini, silakan hubungi kami melalui halaman Kontak di website.
+      </p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-20 border-t border-white/6 pt-8 pb-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-slate-400">© 2025 KreaWords! — All right reserved.</div>
+      <div class="flex gap-4">
+        <a href="privacy.html" class="text-slate-300">Privacy</a>
+        <a href="terms.html" class="text-slate-300">Syarat</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      if (document.documentElement.classList.contains('light')) {
+        document.body.style.background = 'linear-gradient(180deg,#f8fafc,#eef2ff)';
+        document.body.style.color = '#0f172a';
+      } else {
+        document.body.style.background = '';
+        document.body.style.color = '';
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

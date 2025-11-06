@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — KreaWords!</title>
+  <link rel="icon" type="image" href="KREAWORDS BULET.png" height="10px">
+  <meta name="description" content="Contoh project KreaWords" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        keyframes: { float: { '0%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' }, '100%': { transform: 'translateY(0px)' } } },
+        animation: { float: 'float 4s ease-in-out infinite' }
+      } }
+    }
+  </script>
+  <style>
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); }
+    header.scrolled { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="antialiased text-slate-100 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="KREAWORDS BULET.png" alt="logo" width="50" height="50" class="rounded-full object-cover">
+        <span class="hidden md:block font-semibold text-lg tracking-wide">
+          KREAWORDS!
+          <p class="text-xs text-gray-400 -mt-1" style="font-size: x-small;">— Build Your Project —</p>
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="hover:underline ml-2 px-3 py-1 rounded-md glass ring-1 ring-white/6">Home</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Buka menu" class="p-2 glass rounded-md">
+          <svg id="menuIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden max-w-7xl mx-auto px-6 pb-6 hidden">
+      <div class="flex flex-col gap-3">
+        <a href="index.html" class="block py-2 px-3 rounded-md hover:bg-white/5">Home</a>
+      
+
+      </div>
+    </div>
+  </header>
+
+    <!-- CONTENT: Portfolio section (Slider) -->
+<main class="pt-10 pb-20 max-w-7xl mx-auto px-6">
+  <section id="portfolio">
+    <h1 class="text-3xl font-bold text-center">BERIKUT CONTOH NYA :</h1>
+    <p class="mt-2 text-slate-300 text-center">Beberapa Contoh proyek yang kami berikan agar bisa dijadikan referensi nanti nya.</p>
+
+    <!-- Slider container -->
+    <div class="relative mt-8 overflow-hidden">
+      <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+        <!-- Slides -->
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 1.png" alt="project 1" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 2.png" alt="project 2" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 3.png" alt="project 2" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 4.png" alt="project 2" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 5.png" alt="project 2" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 6.png" alt="project 3" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 7.png" alt="project 3" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 8.png" alt="project 3" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="conoth 9.png" alt="project 3" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+        <div class="flex-shrink-0 w-full flex justify-center">
+          <img src="contoh 10.png" alt="project 3" class="object-contain h-96 rounded-lg shadow-lg">
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <button id="prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-2 z-10">
+        &#10094;
+      </button>
+      <button id="next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white rounded-full p-2 z-10">
+        &#10095;
+      </button>
+
+      <!-- Dots -->
+      <div id="dots" class="absolute bottom-1 left-1/2 -translate-x-1/2 flex gap-2">
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+        <span class="dot w-3 h-3 rounded-full bg-white/50"></span>
+      </div>
+    </div>
+     <!-- Call-to-Action Section -->
+      <div class="mt-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-400 text-transparent bg-clip-text">
+            APAKAH ANDA TERTARIK?
+          </span>
+          Ayo Langsung Hubungi Admin Kami Dengan Klik Tombol Action di Bawah Ini dan Kami Siap Membantu Anda Dengan Senang Hati😁
+        </h2>
+        <a href="https://wa.me/6281999182090?text=Halo Kreawords!,%20saya pengen buat website disini dongg!%20" class="inline-block px-6 py-3 font-semibold text-white rounded-full bg-gradient-to-r from-purple-600 to-cyan-400 shadow-lg transition-transform transform hover:scale-105 hover:from-purple-700 hover:to-cyan-500">
+          PESAN SEKARANG!
+        </a>
+      </div>
+  </section>
+</main>
+
+<script>
+  const slider = document.getElementById('slider');
+  const slides = slider.children;
+  const dots = document.querySelectorAll('#dots .dot');
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + slides.length) % slides.length; // looping
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('bg-white', idx === index);
+      dot.classList.toggle('bg-white/50', idx !== index);
+    });
+  }
+
+  document.getElementById('prev').addEventListener('click', () => showSlide(index - 1));
+  document.getElementById('next').addEventListener('click', () => showSlide(index + 1));
+
+  // Auto-slide
+  setInterval(() => showSlide(index + 1), 3000);
+
+  // Inisialisasi
+  showSlide(0);
+</script>
+
+
+  <!-- FOOTER -->
+  <footer class="mt-20 border-t border-white/6 pt-8 pb-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-slate-400">© 2025 KreaWords! — All right reserved.</div>
+      <div class="flex gap-4">
+        <a href="privacy.html"class="text-slate-300">Privacy</a>
+        <a href="terms.html"class="text-slate-300">Syarat</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      if (document.documentElement.classList.contains('light')) {
+        document.body.style.background = 'linear-gradient(180deg,#f8fafc,#eef2ff)';
+        document.body.style.color = '#0f172a';
+      } else {
+        document.body.style.background = '';
+        document.body.style.color = '';
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

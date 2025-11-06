@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KreaWords! — Jasa Pembuatan Website & Desain</title>
+  <link rel="icon" type="image" href="KREAWORDS BULET.png" height="10px">
+  <meta name="description" content="KreaWords — layanan pembuatan website profesional dan desain untuk UMKM. Modern, cepat, dan responsif." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: extend animations
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            float: {
+              '0%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+              '100%': { transform: 'translateY(0px)' }
+            }
+          },
+          animation: {
+            float: 'float 4s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* small custom styles that complement Tailwind */
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+    }
+    .accent-gradient {
+      background: linear-gradient(90deg,#7c3aed,#06b6d4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    /* Floating blob for hero visual */
+    .blob {
+      position:absolute;
+      width:420px;
+      height:420px;
+      filter: blur(48px);
+      opacity:0.18;
+      border-radius:50%;
+      z-index:-1;
+    }
+
+    header.scrolled {
+  background: rgba(15, 23, 42, 0.8); /* warna bg transparan */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+  </style>
+</head>
+<body class="antialiased text-slate-100 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800">
+   <!-- NAVBAR -->
+  <header class="sticky top-0 z-40">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Logo tetap muncul di semua perangkat -->
+        <img src="KREAWORDS BULET.png" alt="logo" width="50px" height="50px" class="rounded-full object-cover">
+
+        <!-- Teks hanya tampil di layar >= md (tablet & desktop) -->
+        <span class="hidden md:block font-semibold text-lg tracking-wide">
+          KREAWORDS!
+          <p class="text-xs text-gray-400 -mt-1" style="font-size: x-small;">— Build Your Project —</p>
+        </span>
+      </a>
+
+      <!-- Navigasi utama hanya tampil di desktop -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#services" class="hover:underline">Layanan Kami</a>
+        <a href="portofolio.html" class="hover:underline">Contoh</a>
+        <a href="#pricing" class="hover:underline">Paket & Harga</a>
+        <a href="#contact" class="hover:underline">Kontak</a>
+      </div>
+
+      <!-- Tombol toggle menu tetap tampil di mobile -->
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Buka menu" class="p-2 glass rounded-md">
+          <svg id="menuIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden max-w-7xl mx-auto px-6 pb-6 hidden">
+      <div class="flex flex-col gap-3">
+        <a href="#services" class="block py-2 px-3 rounded-md hover:bg-white/5">Layanan Kami</a>
+        <a href="portofolio.html" class="block py-2 px-3 rounded-md hover:bg-white/5">Contoh</a>
+        <a href="#pricing" class="block py-2 px-3 rounded-md hover:bg-white/5">Paket & Harga</a>
+        <a href="#contact" class="block py-2 px-3 rounded-md hover:bg-white/5">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <main class="pt-10 pb-20">
+    <section class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
+      <div class="w-full lg:w-6/12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight"span class="accent-gradient">Jasa Pembuatan Website dan Desain Profesional, Dengan Harga Yang Murah😁,<span class="accent-gradient">Mengapa Di KreaWords?</span><br class="hidden sm:block"/> Karena Cepat, Terjangkau, Modern, & Pastinya Responsif</h1>
+        <p class="mt-6 text-slate-300 max-w-xl">Kami membantu semua orang memasarkan produk atau layanan mereka dengan website yang cepat, responsif, dan desain yang menarik. serta kita juga membuka jasa men-desain sarana produk UMKM. — tanpa ribet.</p>
+
+        <div class="mt-8 flex gap-4">
+          <a href="#pricing" class="inline-flex items-center gap-3 px-5 py-3 rounded-md bg-gradient-to-r from-purple-600 to-cyan-400 shadow-lg transition duration-300 hover:scale-105 hover:brightness-110
+">Pesan Sekarang</a>
+          <a href="portofolio.html" class="inline-flex items-center gap-3 px-5 py-3 rounded-md glass ring-1 ring-white/6 transition duration-300 hover:scale-105 hover:brightness-110 transition hover:bg-gradient-to-r from-purple-600 to-cyan-400
+">Lihat Contoh</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div class="p-4 bg-white/5 rounded-md">
+            <div class="text-xs text-slate-300">Waktu Pengerjaan</div>
+            <div class="mt-1 font-semibold">Estimasi 3-5 hari</div>
+          </div>
+          <div class="p-4 bg-white/5 rounded-md">
+            <div class="text-xs text-slate-300">Responsif</div>
+            <div class="mt-1 font-semibold">Desktop • Mobile dan seluruh perangkat lain nya.</div>
+          </div>
+          <div class="p-4 bg-white/5 rounded-md">
+            <div class="text-xs text-slate-300">Garansi</div>
+            <div class="mt-1 font-semibold">FREE 1 TAHUN + MAINTENANCE</div>
+          </div>
+        </div>
+      </div>
+    <div class="relative w-full lg:w-6/12 flex justify-center hidden lg:flex">
+  <div class="blob" style="background: radial-gradient(circle at 30% 30%, #7c3aed, transparent 20%), radial-gradient(circle at 70% 70%, #06b6d4, transparent 20%);"></div>
+
+  <div class="w-[320px] sm:w-[380px] lg:w-[420px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/6 glass p-6 animate-float">
+    <img src="foto web.jpg" alt="demo website preview" class="w-full h-48 object-cover rounded-lg shadow-inner" />
+    <div class="mt-4">
+      <div class="font-semibold mt-1">Tim KreaWords!</div>
+      <div class="text-xs mt-2 text-slate-400">Kami Tim KreaWords! siap membantu kebutuhan anda di bidang digital dengan senang hati.</div>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="mt-20 max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl font-bold">Layanan Kami</h2>
+      <p class="mt-2 text-slate-300 max-w-2xl">Kami menyediakan layanan end-to-end: dari desain brand, pembuatan website, hingga optimasi SEO & pelatihan penggunaan.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-6 rounded-xl glass">
+          <h3 class="font-semibold">Pembuatan Website</h3>
+          <p class="mt-2 text-slate-300 text-sm">Website responsif, cepat, mudah dikelola. Opsi: statis, WordPress, atau toko online sederhana.</p>
+        </article>
+
+        <article class="p-6 rounded-xl glass">
+          <h3 class="font-semibold">Desain Identitas (Logo & Brand)</h3>
+          <p class="mt-2 text-slate-300 text-sm">Logo, palet warna, dan aset visual yang cocok untuk marketplace dan media sosial.</p>
+        </article>
+
+        <article class="p-6 rounded-xl glass">
+          <h3 class="font-semibold">Optimasi & Maintenance</h3>
+          <p class="mt-2 text-slate-300 text-sm">Optimasi kecepatan, SEO dasar, backup, dan pembaruan konten berkala.</p>
+        </article>
+
+        <article class="p-6 rounded-xl glass">
+          <h3 class="font-semibold">Paket Foto Produk</h3>
+          <p class="mt-2 text-slate-300 text-sm">Foto produk siap jual: background bersih, mockup, dan optimasi untuk web.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="mt-20 max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl font-bold">Paket & Harga</h2>
+      <p class="mt-2 text-slate-300">Pilih paket sesuai kebutuhan dan skala Anda.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl glass ring-2 ring-white/6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1">
+          <div class="text-sm text-slate-300">STATIC WEBSITE (BASIC)</div>
+          <div class="mt-2 font-bold text-2xl">Mulai Dari Rp 219.000</div>
+          <ul class="mt-4 text-sm text-slate-300 space-y-2">
+            <li>Landing page 1 halaman</li>
+            <li>Terintegrasi dengan WhatsApp, form, atau sistem tracking iklan</li>
+            <li>Desain menarik, responsif, dan cepat diakses</li>
+            <li>Copywriting persuasif & call-to-action yang jelas</li>
+            <li>Cocok untuk kampanye iklan Google Ads, Meta Ads, dan promosi produk</li>
+            <li>3x revisi desain</li>
+          </ul>
+          <a href="https://wa.me/6281999182090?text=Halo Kreawords!%20saya%20tertarik%20dengan%20paket%20STATIC WEBSITE (BASIC)%20yang ada di katalog website anda." class="mt-6 inline-block px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-cyan-400 transition duration-300 hover:scale-105 hover:brightness-110
+">Minat? Chat admin disini</a>
+        </div>
+
+        <div class="p-6 rounded-xl glass ring-2 ring-white/6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1">
+          <div class="text-sm text-slate-300">DYNAMIC WEBSITE (INTERMEDINATE)</div>
+          <div class="mt-2 font-bold text-2xl">Mulai dari Rp 479.000</div>
+          <ul class="mt-4 text-sm text-slate-300 space-y-2">
+            <li>Website 8 halaman/lebih</li>
+            <li>Profil usaha & katalog produk/jasa</li>
+            <li>Integrasi payment via website (bila di butuhkan)</li>
+            <li>Tombol chat WhatsApp langsung</li>
+            <li>Formulir pemesanan / konsultasi</li>
+            <li>Galeri foto & testimoni pelanggan</li>
+            <li>Desain responsif (mobile friendly)</li>
+            <li>3x revisi desain + CMS</li>
+          </ul>
+          <a href="https://wa.me/6281999182090?text=Halo KreaWords!%20saya%20tertarik%20dengan%20paket%20DYNAMIC WEBSITE (INTERMEDINATE)%20yang ada di katalog website anda." class="mt-6 inline-block px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-cyan-400 transition duration-300 hover:scale-105 hover:brightness-110
+">Minat? Chat admin disini</a>
+        </div>
+
+             <div class="p-6 rounded-xl glass ring-2 ring-white/6 transition-transform duration-300 hover:scale-105 hover:-translate-y-1">
+          <div class="text-sm text-slate-300">PROFESIONAL WEBSITE</div>
+          <div class="mt-2 font-bold text-2xl">Mulai dari Rp 699.000</div>
+          <ul class="mt-4 text-sm text-slate-300 space-y-2">
+            <li>Profil Sekolah/Kampus & visi misi </li>
+            <li>Informasi guru, dosen, dan staff</li>
+            <li>Berita & pengumuman terbaru</li>
+            <li>Pendaftaran online & formulir siswa baru</li>
+            <li>Galeri kegiatan & prestasi siswa</li>
+            <li>Integrasi dengan media sosial dan WhatsApp</li>
+          </ul>
+          <a href="https://wa.me/6281999182090?text=Halo Kreawords!%20saya%20tertarik%20dengan%20paket%20PROFESIONAL WEBSITE%20yang ada di katalog website anda."class="mt-6 inline-block px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-cyan-400 transition duration-300 hover:scale-105 hover:brightness-110
+">Minat? Chat admin disini</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-20 max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-2xl font-bold">Hubungi Kami</h2>
+          <p class="mt-2 text-slate-300">Tanyakan kebutuhan Anda — kami akan bantu susun solusi yang pas untuk Anda.</p>
+
+          <ul class="mt-6 space-y-4 text-slate-300">
+            <li></li><strong>Instagram:</strong> @kreawords</li>
+            <li><strong>Email:</strong> kreawords@gmail.com</li>
+            <li><strong>Alamat:</strong> Bekasi, Jawa Barat, Indonesia</li>
+          </ul>
+
+          <div class="mt-8 flex gap-3">
+            <a class="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-orange-400">Layanan Kritik dan Saran via Whatsapp.</a>
+
+          </div>
+        </div>
+
+        <form class="p-6 rounded-xl glass" onsubmit="handleSubmit(event)">
+          <label class="block text-sm text-slate-300">Kritik :</label>
+          <input id="name" required class="mt-2 w-full p-3 rounded-md bg-transparent ring-1 ring-white/6 outline-none" />
+
+          <label class="block text-sm text-slate-300 mt-4">Saran :</label>
+          <textarea id="message" rows="4" class="mt-2 w-full p-3 rounded-md bg-transparent ring-1 ring-white/6 outline-none"></textarea>
+
+        <div class="mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <button type="submit" class="px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-cyan-400 transition duration-300 hover:scale-105 hover:brightness-110
+">Kirim</button>
+            <div class="text-sm text-slate-400">*Kami akan membalas dalam 1x24 jam kerja.</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-20 border-t border-white/6 pt-8 pb-12">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-slate-400">© 2025 KreaWords! — All right reserved.</div>
+        <div class="flex gap-4">
+          <a href="privacy.html" class="text-slate-300">Privacy</a>
+          <a href="terms.html" class="text-slate-300">Syarat</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Theme toggle (light/dark simulated via class)
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle?.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      if (document.documentElement.classList.contains('light')) {
+        document.body.style.background = 'linear-gradient(180deg,#f8fafc,#eef2ff)';
+        document.body.style.color = '#0f172a';
+      } else {
+        document.body.style.background = '';
+        document.body.style.color = '';
+      }
+    });
+
+    // Handle contact form (demo)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+      // demo: open WhatsApp chat
+      const text = `Kritik:\n${name}\n\nSaran:\n${message}`;
+      const wa = 'https://wa.me/6281999182090?text=' + encodeURIComponent(text);
+      window.open(wa, '_blank');
+    }
+
+    // Small intersection animation
+    const cards = document.querySelectorAll('.glass, figure');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) ent.target.classList.add('translate-y-0','opacity-100');
+      });
+    }, { threshold: 0.12 });
+    cards.forEach(c => {
+      c.classList.add('transform','translate-y-6','opacity-0','transition','duration-700','ease-out');
+      io.observe(c);
+    });
+    // Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+  </script>
+</body>
+</html>
